@@ -4,10 +4,10 @@ import { Neo4jGraphQL } from '@neo4j/graphql';
 import { driver } from './driver';
 import { getTypeDefs } from './schema';
 import { from, logger } from 'env-var';
-const env = from(process.env, {}, logger)
+const env = from(process.env, {}, logger);
 
 const whichTypeDefs = env.get('TYPEDEFS').default('multi').asString();
-const typeDefs = getTypeDefs(whichTypeDefs)
+const typeDefs = getTypeDefs(whichTypeDefs);
 
 const neo4jGraphQL = new Neo4jGraphQL({ typeDefs, driver });
 

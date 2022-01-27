@@ -11,14 +11,13 @@ export function getTypeDefs(which: string): DocumentNode {
   // we don't want to catch these, if it fails, it's a critical error
   const typeDefs: GraphQLSchema = loadSchemaSync(
     ['typedefs/movie.graphql', 'typedefs/review.graphql', 'typedefs/user.graphql'],
-    { loaders: [new GraphQLFileLoader()]},
+    { loaders: [new GraphQLFileLoader()] }
   );
-  let tdList: GraphQLSchema[] = [typeDefs]
+  let tdList: GraphQLSchema[] = [typeDefs];
 
-  const typeDefsExtra: GraphQLSchema = loadSchemaSync(
-    'typedefs/user-extended.graphql',
-    { loaders: [new GraphQLFileLoader()]},
-  )
+  const typeDefsExtra: GraphQLSchema = loadSchemaSync('typedefs/user-extended.graphql', {
+    loaders: [new GraphQLFileLoader()],
+  });
   tdList = [typeDefs, typeDefsExtra];
 
   return mergeTypeDefs(tdList);

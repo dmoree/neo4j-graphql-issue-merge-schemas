@@ -3,9 +3,9 @@ type Movie {
   reviews: [Review!]! @relationship(type: "HAS_REVIEW", direction: OUT)
   averageRating: Float!
     @cypher(
-        statement: """
-        MATCH (this)-[:HAS_REVIEW]->(r:Review)
-        RETURN avg(r.rating)
-        """
+      statement: """
+      MATCH (this)-[:HAS_REVIEW]->(r:Review)
+      RETURN avg(r.rating)
+      """
     )
 }

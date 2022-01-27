@@ -4,7 +4,8 @@
   "description": "Demo to test/debug merging typedefs with Neo4j augmented definitions",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node-dev -r $npm_package_main",
+    "start": "ts-node-dev src/index.ts",
+    "format": "prettier --write 'src/**/*.ts' '*.json' 'typedefs/*.graphql'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Benjamin Rood",
