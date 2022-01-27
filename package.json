@@ -2,6 +2,9 @@
   "name": "neo4j-graphql-merge-schemas-demo",
   "version": "0.0.1",
   "description": "Demo to test/debug merging typedefs with Neo4j augmented definitions",
+  "engines": {
+    "node": ">=16.13.0"
+  },
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node-dev src/index.ts",
