@@ -1,0 +1,33 @@
+{
+  "name": "neo4j-graphql-merge-schemas-demo",
+  "version": "0.0.1",
+  "description": "Demo to test/debug merging typedefs with Neo4j augmented definitions",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node-dev -r $npm_package_main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benjamin Rood",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.3.3",
+    "@graphql-tools/load": "^7.5.1",
+    "@graphql-tools/merge": "^8.2.1",
+    "@graphql-tools/schema": "^8.3.1",
+    "@neo4j/graphql": "^2.5.6",
+    "apollo-server": "^3.6.2",
+    "env-var": "^7.1.1",
+    "graphql": "^15.8.0",
+    "neo4j-driver": "^4.4.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  }
+}

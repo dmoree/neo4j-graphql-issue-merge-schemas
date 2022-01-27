@@ -1,0 +1,8 @@
+type Review @exclude {
+  id: ID! @id
+  rating: Float!
+  createdAt: DateTime!
+  content: String!
+  author: User! @relationship(type: "AUTHORED", direction: IN)
+  movie: Movie! @relationship(type: "HAS_REVIEW", direction: IN)
+}
